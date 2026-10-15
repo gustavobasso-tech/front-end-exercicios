@@ -1,0 +1,45 @@
+# Registros de Processo & Vibe Coding — Aura Cerâmica
+
+## 1. Tema & Conceito
+* **Projeto:** Landing Page para Ateliê de Cerâmica Artesanal "Aura".
+* **Objetivo:** Criar uma presença digital elegante, acolhedora e responsiva para apresentar coleções de peças de cerâmica artesanal, história do ateliê e opções de encomenda/contato.
+
+---
+
+## 2. Decisões de Identidade Visual (IDV)
+
+### Paleta de Cores
+* **Off-white/Areia (`#F9F6F0`):** Fundo suave que remete a tecidos naturais e papel artesanal.
+* **Verde Botânico (`#2C3E35`):** Cor primária para botões, footer e elementos de forte destaque.
+* **Terracota/Argila (`#B86B53`):** Cor de acento usada em detalhes de números, pequenas tags e bordas.
+* **Grafite Quente (`#212121`):** Texto de alto contraste, porém mais suave que o preto puro `#000000`.
+
+### Tipografia
+* **Playfair Display:** Para os títulos, dando um toque editorial refinado.
+* **Inter:** Para os textos descritivos e botões, garantindo legibilidade.
+
+---
+
+## 3. Registros de Prompts & Iterações com a IA
+
+### 🏁 Prompt 1 — Estrutura Inicial e Layout Geral
+> **Prompt:**  
+> *"Crie a estrutura HTML com Tailwind CSS para uma landing page de um ateliê de cerâmica artesanal chamado Aura. Use uma paleta de tons terrosos (off-white #F9F6F0, verde #2C3E35, terracota #B86B53). O estilo do código deve ser limpo e direto, parecendo feito por um programador iniciante."*
+
+* **Avaliando a entrega da IA:** A IA estruturou bem as seções (Navbar, Hero, Coleções, Sobre e Contato).
+* **Olhar Crítico & Ajuste:** As margens entre as seções em dispositivos móveis precisavam de mais espaçamento vertical para respirar melhor.
+
+---
+
+### 🔄 Prompt 2 — Refinamento Visual e Responsividade
+> **Prompt:**  
+> *"Ajuste o grid da galeria de peças para usar 1 coluna no celular e 3 colunas no computador, e adicione uma seção simples de depoimentos de clientes com bordas sutis."*
+
+* **Avaliando a entrega da IA:** O grid foi corrigido usando as classes `grid-cols-1 md:grid-cols-3` do Tailwind.
+* **Decisão de Design:** Optou-se por usar o Tailwind via CDN diretamente no arquivo HTML para manter o projeto prático, sem necessidade de configurar builds de Node.js no início da aprendizagem.
+
+---
+
+## 4. Aprendizados & Reflexão sobre a Ferramenta de IA
+* **Comunicação Específica:** Passar os códigos hexadecimais exatos de cor facilitou para a IA aplicar a paleta sem adivinhar ou usar cores genéricas.
+* **Qualidade do Código:** Acompanhar a geração do HTML ajudou a entender na prática como o sistema de grid e flexbox do Tailwind funciona para ajustar a página conforme a necessidade.

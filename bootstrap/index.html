@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão Nobre</title>
+    <!-- Link do Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar-custom {
+            background-color: #212529;
+        }
+        .btn-laranja {
+            background-color: #b07d47;
+            color: white;
+        }
+        .btn-laranja:hover {
+            background-color: #93673a;
+            color: white;
+        }
+        .caixa-hero {
+            background-color: #d4b595;
+            height: 300px;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color: #d4b595;">Grão Nobre</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item ms-3">
+                        <!-- Botão que abre o Modal -->
+                        <button class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalComprar">Comprar agora</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4">
+                <h1 class="display-5 fw-bold">Café de origem, torrado com propósito.</h1>
+                <p class="text-muted">A Grão Nobre trabalha direto com pequenos produtores para levar até você grãos especiais, torrados em lotes pequenos toda semana.</p>
+            </div>
+            <div class="col-md-6">
+    <img src="images.jfif" alt="Café Grão Nobre" class="img-fluid rounded shadow">
+</div>
+    </header>
+
+    <section id="depoimentos" class="container my-5 text-center">
+        <p class="text-uppercase text-muted small fw-bold mb-1">Quem já experimentou</p>
+        <h2 class="fw-bold mb-4">O que dizem nossos clientes</h2>
+        
+        <div class="card p-4 mx-auto shadow-sm" style="max-width: 600px;">
+            <p class="text-warning fs-4 mb-2">★★★★★</p>
+            <p class="fst-italic">"Melhor café que já experimenti em assinatura. Chega sempre fresquinho."</p>
+            <p class="fw-bold mb-0">Marina Alves</p>
+            <small class="text-muted">Assinante desde 2023</small>
+        </div>
+    </section>
+
+    <section id="faq" class="container my-5" style="max-width: 700px;">
+        <h2 class="fw-bold text-center mb-4">Perguntas frequentes</h2>
+        
+        <div class="accordion" id="accordionFaq">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        Qual a validade do café após aberto?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                    <div class="accordion-body">
+                        Recomendamos o consumo em até 30 dias para aproveitar melhor o aroma e o sabor.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        Vocês entregam para todo o Brasil?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+                    <div class="accordion-body">
+                        Sim! Enviamos para todas as regiões, com prazo médio de 3 a 7 dias úteis dependendo da localidade.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Posso cancelar minha assinatura quando quiser?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                    <div class="accordion-body">
+                        Sim, o cancelamento pode ser feito a qualquer momento diretamente pelo seu painel.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalComprar" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Faça seu pedido:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="check1">
+                        <label class="form-check-label" for="check1">Kit de degustação</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="check2">
+                        <label class="form-check-label" for="check2">1 pacote de 250g</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="check3">
+                        <label class="form-check-label" for="check3">5 pacotes de 250g</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100">Ir para o carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="mb-0">&copy; 2026 Grão Nobre. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

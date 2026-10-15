@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura — Cerâmica Artesanal</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fontes do Google: Playfair Display e Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Configuração da paleta de cores no Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'fundo-areia': '#F9F6F0',
+                        'verde-botanico': '#2C3E35',
+                        'terracota': '#B86B53',
+                        'grafite': '#212121',
+                        'card-fundo': '#F1ECE4'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-fundo-areia text-grafite font-sans antialiased">
+
+    <!-- 1. Navbar / Cabeçalho -->
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
+        <a href="#" class="font-serif text-2xl font-bold tracking-wide text-verde-botanico">
+            Aura<span class="text-terracota">.</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-sm text-grafite/80">
+            <a href="#colecoes" class="hover:text-terracota transition">Coleções</a>
+            <a href="#sobre" class="hover:text-terracota transition">O Ateliê</a>
+            <a href="#depoimentos" class="hover:text-terracota transition">Depoimentos</a>
+            <a href="#contato" class="hover:text-terracota transition">Contato</a>
+        </div>
+
+        <a href="#contato" class="bg-verde-botanico text-white px-5 py-2.5 rounded text-xs font-medium hover:bg-opacity-90 transition">
+            Encomendar peça
+        </a>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header class="max-w-6xl mx-auto px-6 py-12 md:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-terracota text-xs uppercase tracking-widest font-semibold block mb-3">FEITO À MÃO EM SÃO PAULO</span>
+                <h1 class="font-serif text-4xl md:text-5xl font-bold leading-tight mb-6">
+                    A beleza imperfeita da terra transformada em arte.
+                </h1>
+                <p class="text-grafite/70 text-base mb-8 max-w-md leading-relaxed">
+                    Modelamos peças únicas com argilas locais e esmaltes atóxicos. Cada utilitário traz consigo o ritmo calmo do processo artesanal.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="#colecoes" class="bg-verde-botanico text-white px-6 py-3 rounded text-xs font-semibold uppercase tracking-wider hover:bg-opacity-90 transition">
+                        Ver Coleções
+                    </a>
+                    <a href="#sobre" class="border border-grafite/30 text-grafite px-6 py-3 rounded text-xs font-semibold uppercase tracking-wider hover:bg-grafite hover:text-white transition">
+                        Conhecer o Ateliê
+                    </a>
+                </div>
+            </div>
+
+            <!-- Imagem Hero (colecao.webp) -->
+            <div class="relative h-80 md:h-[420px] rounded-2xl overflow-hidden border border-grafite/10 shadow-sm">
+                <img src="colecao.webp" alt="Coleção de Cerâmica Aura" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+                    <div class="text-white">
+                        <p class="font-serif text-lg italic">Coleção Argila & Sol</p>
+                        <p class="text-xs text-white/80">Edição limitada em tons terrosos e acabamento acetinado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Seção de Coleções / Peças em Destaque -->
+    <section id="colecoes" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <span class="text-terracota text-xs uppercase tracking-widest font-semibold block mb-2">CATÁLOGO</span>
+            <h2 class="font-serif text-3xl font-bold">Peças em Destaque</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: caneca_oliva.jfif -->
+            <div class="bg-card-fundo rounded-xl p-6 border border-grafite/10 flex flex-col justify-between">
+                <div>
+                    <div class="h-56 rounded-lg overflow-hidden mb-6 border border-grafite/10">
+                        <img src="caneca_oliva.jfif" alt="Caneca Rústica Oliva" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold mb-2">Caneca Rústica Oliva</h3>
+                    <p class="text-xs text-grafite/70 mb-4 leading-relaxed">Capacidade para 300ml, modelada manualmente na roda de oleiro com argila clara.</p>
+                </div>
+                <span class="text-sm font-semibold text-terracota">R$ 85,00</span>
+            </div>
+
+            <!-- Card 2: prato_terracota.jpg -->
+            <div class="bg-card-fundo rounded-xl p-6 border border-grafite/10 flex flex-col justify-between">
+                <div>
+                    <div class="h-56 rounded-lg overflow-hidden mb-6 border border-grafite/10">
+                        <img src="prato_terracota.jpg" alt="Prato Raso Terracota" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold mb-2">Prato Raso Terracota</h3>
+                    <p class="text-xs text-grafite/70 mb-4 leading-relaxed">Ideal para servir refeições especiais. Queimado a alta temperatura (1240°C).</p>
+                </div>
+                <span class="text-sm font-semibold text-terracota">R$ 110,00</span>
+            </div>
+
+            <!-- Card 3: vaso_areia.jfif -->
+            <div class="bg-card-fundo rounded-xl p-6 border border-grafite/10 flex flex-col justify-between">
+                <div>
+                    <div class="h-56 rounded-lg overflow-hidden mb-6 border border-grafite/10">
+                        <img src="vaso_areia.jfif" alt="Vaso Escultórico Areia" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold mb-2">Vaso Escultórico Areia</h3>
+                    <p class="text-xs text-grafite/70 mb-4 leading-relaxed">Peça decorativa com textura natural de areia e acabamento rústico fosco.</p>
+                </div>
+                <span class="text-sm font-semibold text-terracota">R$ 140,00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Seção Sobre o Ateliê -->
+    <section id="sobre" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="bg-verde-botanico text-fundo-areia rounded-2xl p-8 md:p-14 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="text-terracota text-xs uppercase tracking-widest font-semibold block mb-3">NOSSA HISTÓRIA</span>
+                <h2 class="font-serif text-3xl font-bold mb-6 text-white leading-snug">
+                    Respeito ao tempo e aos materiais da natureza.
+                </h2>
+                <p class="text-fundo-areia/80 text-sm leading-relaxed mb-4">
+                    O ateliê Aura nasceu do desejo de desacelerar. Acreditamos que os objetos que nos cercam no dia a dia devem transmitir intenção, afeto e calma.
+                </p>
+                <p class="text-fundo-areia/80 text-sm leading-relaxed">
+                    Todas as nossas peças são produzidas em pequenos lotes. Do amassar da argila à última queima no forno, valorizamos cada marca única deixada pelas mãos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 text-center">
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                    <span class="font-serif text-3xl font-bold text-terracota block mb-1">100%</span>
+                    <span class="text-xs text-fundo-areia/70">Artesanal & Autoral</span>
+                </div>
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                    <span class="font-serif text-3xl font-bold text-terracota block mb-1">1240°C</span>
+                    <span class="text-xs text-fundo-areia/70">Queima de Alta Temperatura</span>
+                </div>
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 col-span-2">
+                    <span class="font-serif text-2xl font-bold text-white block mb-1">Atóxico</span>
+                    <span class="text-xs text-fundo-areia/70">Seguro para alimentos e uso diário</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Seção Depoimentos -->
+    <section id="depoimentos" class="max-w-6xl mx-auto px-6 py-16 text-center">
+        <span class="text-terracota text-xs uppercase tracking-widest font-semibold block mb-2">QUEM JÁ RECEBEU</span>
+        <h2 class="font-serif text-3xl font-bold mb-12">Relatos do nosso público</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div class="bg-card-fundo p-6 rounded-xl border border-grafite/10">
+                <p class="text-xs text-grafite/80 italic mb-4 leading-relaxed">
+                    "As canecas são lindas e têm uma pegada super confortável. O café de todas as manhãs virou um ritual especial."
+                </p>
+                <span class="text-xs font-semibold text-verde-botanico block">Clara Mendes</span>
+                <span class="text-[10px] text-grafite/50">São Paulo, SP</span>
+            </div>
+
+            <div class="bg-card-fundo p-6 rounded-xl border border-grafite/10">
+                <p class="text-xs text-grafite/80 italic mb-4 leading-relaxed">
+                    "Comprei o conjunto de pratos para presentear no casamento da minha irmã. Ela amou o acabamento rústico!"
+                </p>
+                <span class="text-xs font-semibold text-verde-botanico block">Lucas Ferraz</span>
+                <span class="text-[10px] text-grafite/50">Curitiba, PR</span>
+            </div>
+
+            <div class="bg-card-fundo p-6 rounded-xl border border-grafite/10">
+                <p class="text-xs text-grafite/80 italic mb-4 leading-relaxed">
+                    "Dá para perceber o cuidado em cada detalhe, até na embalagem. A peça chegou impecável."
+                </p>
+                <span class="text-xs font-semibold text-verde-botanico block">Beatriz Lima</span>
+                <span class="text-[10px] text-grafite/50">Belo Horizonte, MG</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Seção de Contato / Encomenda -->
+    <section id="contato" class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-card-fundo p-8 md:p-12 rounded-2xl border border-grafite/10">
+            <div class="text-center mb-8">
+                <span class="text-terracota text-xs uppercase tracking-widest font-semibold block mb-2">FAÇA SEU PEDIDO</span>
+                <h2 class="font-serif text-3xl font-bold">Entre em contato</h2>
+                <p class="text-xs text-grafite/70 mt-2">Preencha os campos para encomendar peças personalizadas ou tirar dúvidas:</p>
+            </div>
+
+            <form class="space-y-4 max-w-lg mx-auto">
+                <div>
+                    <label class="block text-xs font-medium text-grafite/80 mb-1">Nome completo</label>
+                    <input type="text" placeholder="Seu nome" class="w-full bg-fundo-areia border border-grafite/20 rounded px-3 py-2 text-xs focus:outline-none focus:border-verde-botanico">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-grafite/80 mb-1">E-mail</label>
+                    <input type="email" placeholder="seu@email.com" class="w-full bg-fundo-areia border border-grafite/20 rounded px-3 py-2 text-xs focus:outline-none focus:border-verde-botanico">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-grafite/80 mb-1">Interesse</label>
+                    <select class="w-full bg-fundo-areia border border-grafite/20 rounded px-3 py-2 text-xs focus:outline-none focus:border-verde-botanico">
+                        <option>Peças pronta entrega</option>
+                        <option>Encomenda personalizada</option>
+                        <option>Lotes para restaurantes/cafés</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-grafite/80 mb-1">Mensagem</label>
+                    <textarea rows="4" placeholder="Descreva o que você procura..." class="w-full bg-fundo-areia border border-grafite/20 rounded px-3 py-2 text-xs focus:outline-none focus:border-verde-botanico"></textarea>
+                </div>
+
+                <button type="button" class="w-full bg-verde-botanico hover:bg-opacity-90 text-white text-xs font-semibold py-3 rounded transition uppercase tracking-wider">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 7. Rodapé / Footer -->
+    <footer class="border-t border-grafite/10 py-12 text-center text-xs text-grafite/60">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="font-serif text-lg font-bold text-verde-botanico mb-2">Aura Cerâmica</p>
+            <p class="mb-4">Ateliê aberto para visitas agendadas — Vila Madalena, SP</p>
+            <p>&copy; 2026 Aura Cerâmica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

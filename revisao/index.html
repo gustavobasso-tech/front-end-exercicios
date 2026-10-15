@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCore — Tecnologia para acelerar ideias</title>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'fundo-escuro': '#0d0714',
+                        'fundo-hero': '#1b102b',
+                        'card-escuro': '#181024',
+                        'roxo-principal': '#8b5cf6',
+                        'roxo-hover': '#7c3aed',
+                        'texto-suave': '#a1a1aa'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-fundo-escuro text-white font-sans antialiased">
+
+    
+    <div class="bg-fundo-hero pb-20">
+        <!-- Navbar -->
+        <nav class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-bold text-xl">
+                <span class="w-4 h-4 rounded-full border-2 border-roxo-principal inline-block"></span>
+                NovaCore
+            </div>
+            
+            <div class="flex items-center gap-8 text-sm text-texto-suave">
+                <a href="#servicos" class="hover:text-white transition">Serviços</a>
+                <a href="#sobre" class="hover:text-white transition">Sobre nós</a>
+                <a href="#depoimentos" class="hover:text-white transition">Clientes</a>
+                <a href="#contato" class="hover:text-white transition">Contato</a>
+            </div>
+        </nav>
+
+        
+        <header class="max-w-4xl mx-auto text-center px-6 pt-16 pb-8">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
+                Tecnologia para acelerar<br>ideias,<br>equipes e negócios
+            </h1>
+            <p class="text-texto-suave max-w-xl mx-auto mb-8 text-sm md:text-base">
+                Soluções digitais sob medida para empresas que querem inovar com estratégia, ciência e eficiência.
+            </p>
+            <a href="#contato" class="inline-block bg-roxo-principal hover:bg-roxo-hover text-white text-xs font-semibold uppercase tracking-wider px-8 py-3 rounded-md transition shadow-lg">
+                Quero começar
+            </a>
+        </header>
+    </div>
+
+    
+    <section id="servicos" class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <span class="text-roxo-principal text-xs uppercase tracking-widest font-semibold block mb-2">NOSSOS SERVIÇOS</span>
+        <h2 class="text-3xl font-bold mb-4">Serviços</h2>
+        <p class="text-texto-suave max-w-2xl mx-auto text-sm mb-12">
+            A NovaCore combina tecnologia, design e desenvolvimento para criar soluções digitais que simplificam processos e fazem negócios evoluírem.
+        </p>
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div class="bg-card-escuro p-6 rounded-xl border border-white/5">
+                <h3 class="font-bold text-sm uppercase tracking-wider mb-2 text-white">Desenvolvimento Web</h3>
+                <p class="text-xs text-texto-suave leading-relaxed">Sites, portais e plataformas modernas com foco em performance, acessibilidade e escalabilidade.</p>
+            </div>
+
+            <div class="bg-card-escuro p-6 rounded-xl border border-white/5">
+                <h3 class="font-bold text-sm uppercase tracking-wider mb-2 text-white">Aplicações Mobile</h3>
+                <p class="text-xs text-texto-suave leading-relaxed">Experiências móveis intuitivas para aproximar empresas e usuários em diferentes jornadas digitais.</p>
+            </div>
+
+            <div class="bg-card-escuro p-6 rounded-xl border border-white/5">
+                <h3 class="font-bold text-sm uppercase tracking-wider mb-2 text-white">Automação de Processos</h3>
+                <p class="text-xs text-texto-suave leading-relaxed">Fluxos mais eficientes para reduzir tarefas manuais e melhorar a produtividade das equipes.</p>
+            </div>
+
+            <div class="bg-card-escuro p-6 rounded-xl border border-white/5">
+                <h3 class="font-bold text-sm uppercase tracking-wider mb-2 text-white">Integração de Sistemas</h3>
+                <p class="text-xs text-texto-suave leading-relaxed">Conexão entre ferramentas, dados e plataformas para normalizar operações e informações.</p>
+            </div>
+
+            <div class="bg-card-escuro p-6 rounded-xl border border-white/5">
+                <h3 class="font-bold text-sm uppercase tracking-wider mb-2 text-white">Dados e Analytics</h3>
+                <p class="text-xs text-texto-suave leading-relaxed">Dashboards e soluções analíticas para transformar dados em decisões mais inteligentes.</p>
+            </div>
+
+            <div class="bg-card-escuro p-6 rounded-xl border border-white/5">
+                <h3 class="font-bold text-sm uppercase tracking-wider mb-2 text-white">UX / UI Interface</h3>
+                <p class="text-xs text-texto-suave leading-relaxed">Interfaces claras, funcionais e atrativas para melhorar a experiência dos produtos digitais.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="sobre" class="max-w-6xl mx-auto px-6 py-12">
+        <div class="text-center mb-10">
+            <span class="text-roxo-principal text-xs uppercase tracking-widest font-semibold block mb-2">QUEM SOMOS</span>
+            <h2 class="text-3xl font-bold">Sobre nós</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-roxo-principal mb-4">
+                    ATUAÇÃO EM DIFERENTES MERCADOS E SOLUÇÕES DIGITAIS
+                </h3>
+                <p class="text-texto-suave text-sm leading-relaxed mb-4">
+                    Somos uma empresa de tecnologia focada em desenvolver soluções digitais para negócios que buscam inovação com consistência. Atuamos lado a lado com nossos clientes na criação de produtos, melhoria de processos e evolução tecnológica.
+                </p>
+                <p class="text-texto-suave text-sm leading-relaxed">
+                    Nosso foco no mercado pela combinação entre estratégia, design e desenvolvimento. Contamos com times multidisciplinares, entregando soluções personalizadas para diferentes segmentos e desafios.
+                </p>
+            </div>
+
+            
+            <div class="bg-gradient-to-br from-fundo-hero to-card-escuro h-64 rounded-2xl border border-white/10 flex items-center justify-center p-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full bg-roxo-principal/30"></div>
+                    <div class="w-12 h-12 rounded-full bg-roxo-principal/40"></div>
+                    <div class="w-16 h-16 rounded-full bg-roxo-principal/60"></div>
+                    <div class="w-10 h-10 rounded-full bg-roxo-principal/30"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="depoimentos" class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <span class="text-roxo-principal text-xs uppercase tracking-widest font-semibold block mb-2">NOSSOS CLIENTES</span>
+        <h2 class="text-3xl font-bold mb-12">Depoimentos</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-card-escuro p-8 rounded-xl border border-white/5 flex flex-col items-center">
+                <div class="w-10 h-10 bg-roxo-principal/40 rounded-full mb-4"></div>
+                <p class="text-xs text-texto-suave italic mb-4">
+                    "Tivemos um excelente resultado para novos produtos e todo o processo de um projeto que parecia impossível."
+                </p>
+                <span class="text-xs font-semibold text-white">Ana Paula Santos</span>
+            </div>
+
+            <div class="bg-card-escuro p-8 rounded-xl border border-white/5 flex flex-col items-center">
+                <div class="w-10 h-10 bg-roxo-principal/40 rounded-full mb-4"></div>
+                <p class="text-xs text-texto-suave italic mb-4">
+                    "A consultoria em app nos atendeu rapidamente e a plataforma desenvolvida facilitou muito a experiência inteira dos nossos clientes."
+                </p>
+                <span class="text-xs font-semibold text-white">Carlos Eduardo Silva</span>
+            </div>
+
+            <div class="bg-card-escuro p-8 rounded-xl border border-white/5 flex flex-col items-center">
+                <div class="w-10 h-10 bg-roxo-principal/40 rounded-full mb-4"></div>
+                <p class="text-xs text-texto-suave italic mb-4">
+                    "O projeto mudou nossa rotina e acelerou nossa operação, além de melhorar toda a experiência digital."
+                </p>
+                <span class="text-xs font-semibold text-white">Mariana Rocha</span>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contato" class="max-w-6xl mx-auto px-6 py-12 text-center">
+        <span class="text-roxo-principal text-xs uppercase tracking-widest font-semibold block mb-2">FALE COM A GENTE</span>
+        <h2 class="text-3xl font-bold mb-12">Contato</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <!-- Ilustração à Esquerda -->
+            <div class="bg-gradient-to-br from-fundo-hero to-card-escuro rounded-2xl p-8 border border-white/10 flex items-center justify-center min-h-[300px]">
+                <div class="relative w-full h-full flex items-center justify-center">
+                    <div class="w-20 h-20 rounded-full border border-roxo-principal/40 absolute"></div>
+                    <div class="w-32 h-32 rounded-full border border-roxo-principal/20 absolute"></div>
+                    <div class="w-44 h-44 rounded-full border border-roxo-principal/10 absolute"></div>
+                </div>
+            </div>
+
+            
+            <div class="bg-card-escuro p-8 rounded-2xl border border-white/10">
+                <h3 class="text-sm font-bold text-roxo-principal mb-1">Conheça melhor nossas soluções</h3>
+                <p class="text-xs text-texto-suave mb-6">Preencha o formulário para falar com um especialista:</p>
+
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-xs text-texto-suave mb-1">Nome</label>
+                        <input type="text" class="w-full bg-fundo-escuro border border-white/10 rounded px-3 py-2 text-xs text-white focus:outline-none focus:border-roxo-principal">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-texto-suave mb-1">E-mail</label>
+                        <input type="email" class="w-full bg-fundo-escuro border border-white/10 rounded px-3 py-2 text-xs text-white focus:outline-none focus:border-roxo-principal">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-texto-suave mb-1">Empresa</label>
+                        <input type="text" class="w-full bg-fundo-escuro border border-white/10 rounded px-3 py-2 text-xs text-white focus:outline-none focus:border-roxo-principal">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-texto-suave mb-1">Mensagem</label>
+                        <textarea rows="3" class="w-full bg-fundo-escuro border border-white/10 rounded px-3 py-2 text-xs text-white focus:outline-none focus:border-roxo-principal"></textarea>
+                    </div>
+
+                    <button type="button" class="bg-roxo-principal hover:bg-roxo-hover text-white text-xs font-semibold px-6 py-2.5 rounded transition uppercase">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-black/40 border-t border-white/5 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <!-- Logo Footer -->
+            <div class="flex flex-col items-center gap-2 font-bold text-lg mb-8">
+                <span class="w-5 h-5 rounded-full border-2 border-roxo-principal inline-block"></span>
+                NovaCore
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs text-texto-suave text-left max-w-3xl mx-auto mb-12">
+                <div>
+                    <h4 class="text-white font-semibold mb-3">A EMPRESA</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Áreas de atuação</a></li>
+                        <li><a href="#" class="hover:underline">Soluções</a></li>
+                        <li><a href="#" class="hover:underline">Trabalhe conosco</a></li>
+                        <li><a href="#" class="hover:underline">Política de privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-3">CONTATO</h4>
+                    <p class="mb-1">+55 11 4002-8922</p>
+                    <p>contato@novacore.com.br</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-3">ONDE ESTAMOS</h4>
+                    <p class="mb-1">Av. Paulista, 1000</p>
+                    <p class="mb-1">Bela Vista — São Paulo, SP</p>
+                    <p>CEP 01310-100</p>
+                </div>
+            </div>
+
+            <p class="text-[10px] text-texto-suave/60">
+                &copy; 2026 NovaCore. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Cerâmica — Ateliê de cerâmica artesanal</title>
+  <meta name="description" content="Aura é um ateliê de cerâmica artesanal. Vasos, xícaras e peças de mesa feitos à mão, em pequenas fornadas. Faça sua encomenda.">
+  <meta name="theme-color" content="#F9F6F0">
+
+  <!-- Só adiciona a classe "js" se o JavaScript estiver ativo. O CSS usa isso para as animações de entrada. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#colecoes">Pular para o conteúdo</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="logo" aria-label="Aura Cerâmica, ir para o início">Aura<span>.</span></a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Principal">
+        <a href="#colecoes">Coleções</a>
+        <a href="#processo">Processo</a>
+        <a href="#sobre">O ateliê</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Abrir lista de encomenda">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11H6.2L5 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-btn__label">Encomenda</span>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow reveal">Ateliê de cerâmica artesanal</p>
+
+          <h1 class="hero__title" aria-label="Peças que carregam a delicadeza do barro">
+            <span class="w" aria-hidden="true"><span style="--i:0">Peças</span></span>
+            <span class="w" aria-hidden="true"><span style="--i:1">que</span></span>
+            <span class="w" aria-hidden="true"><span style="--i:2">carregam</span></span>
+            <span class="w" aria-hidden="true"><span style="--i:3">a</span></span>
+            <span class="w" aria-hidden="true"><span style="--i:4">delicadeza</span></span>
+            <span class="w" aria-hidden="true"><span style="--i:5">do</span></span>
+            <span class="w" aria-hidden="true"><span style="--i:6"><em>barro</em></span></span>
+          </h1>
+
+          <p class="lead reveal" data-delay="350">
+            Vasos, xícaras e peças de mesa moldados à mão, um a um. Cada peça leva dias de
+            trabalho, e carrega as marcas de quem a fez.
+          </p>
+
+          <div class="hero__cta reveal" data-delay="450">
+            <a class="btn btn--primary" href="#colecoes">Explorar coleções</a>
+            <a class="btn btn--ghost" href="#processo">Ver como fazemos</a>
+          </div>
+
+          <ul class="hero__meta reveal" data-delay="550">
+            <li><strong>Fornadas pequenas</strong><span>poucas peças por vez</span></li>
+            <li><strong>Esmaltes próprios</strong><span>testados no ateliê</span></li>
+            <li><strong>Sob encomenda</strong><span>cor e medida à sua escolha</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <div class="hero__disc"></div>
+          <div class="float f-main" data-art="vaso" data-glaze="terracota" data-depth="18"></div>
+          <div class="float f-cup" data-art="xicara" data-glaze="musgo" data-depth="-26"></div>
+          <div class="float f-bowl" data-art="tigela" data-glaze="areia" data-depth="34"></div>
+
+          <svg class="badge" viewBox="0 0 120 120">
+            <defs>
+              <path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/>
+            </defs>
+            <text><textPath href="#circ" textLength="272" lengthAdjust="spacing">feito à mão • peça única • feito à mão • peça única •</textPath></text>
+            <text x="60" y="70" text-anchor="middle" class="badge__a">A</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAIXA ANIMADA ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marquee">
+        <span>Torno</span><span>Esmalte</span><span>Forno a 1.200 °C</span><span>Peça única</span><span>Barro local</span><span>Feito com calma</span>
+      </div>
+    </div>
+
+    <!-- ================= COLEÇÕES ================= -->
+    <section class="section" id="colecoes">
+      <div class="container">
+        <header class="section__head">
+          <div>
+            <p class="eyebrow reveal">Nossas coleções</p>
+            <h2 class="reveal" data-delay="80">Escolha a peça que combina com a sua casa</h2>
+          </div>
+          <div class="chips reveal" data-delay="160" role="group" aria-label="Filtrar peças por categoria">
+            <button class="chip" data-filter="todas" aria-pressed="true">Todas</button>
+            <button class="chip" data-filter="vasos" aria-pressed="false">Vasos</button>
+            <button class="chip" data-filter="xicaras" aria-pressed="false">Xícaras</button>
+            <button class="chip" data-filter="mesa" aria-pressed="false">Mesa posta</button>
+          </div>
+        </header>
+
+        <!-- 1 coluna no celular, 2 no tablet, 3 e 4 no computador (ver style.css) -->
+        <div class="grid" id="grid" aria-live="polite">
+          <noscript><p>Ative o JavaScript para ver as peças.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESSO ================= -->
+    <section class="section section--sand" id="processo">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <p class="eyebrow reveal">Do barro à mesa</p>
+          <h2 class="reveal" data-delay="80">Quatro etapas, nenhuma pressa</h2>
+          <p class="lead reveal" data-delay="160">Uma peça leva cerca de três semanas entre o primeiro toque no barro e o dia em que sai do forno.</p>
+        </header>
+
+        <ol class="steps" id="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Modelar</h3>
+            <p>O barro é sovado e levado ao torno ou modelado à mão, até a forma aparecer.</p>
+          </li>
+          <li class="step reveal" data-delay="120">
+            <span class="step__num">02</span>
+            <h3>Secar</h3>
+            <p>A peça descansa por vários dias, devagar, para não trincar no forno.</p>
+          </li>
+          <li class="step reveal" data-delay="240">
+            <span class="step__num">03</span>
+            <h3>Queimar</h3>
+            <p>Primeira queima a 900 °C. A peça fica firme e pronta para receber o esmalte.</p>
+          </li>
+          <li class="step reveal" data-delay="360">
+            <span class="step__num">04</span>
+            <h3>Esmaltar</h3>
+            <p>Esmalte aplicado à mão e segunda queima a 1.200 °C. É aqui que a cor ganha vida.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__visual reveal">
+          <div class="arch">
+            <div data-art="vaso" data-glaze="musgo" class="arch__piece"></div>
+          </div>
+          <p class="arch__note">Ateliê Aura<br><span>desde 2018</span></p>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow reveal">O ateliê</p>
+          <h2 class="reveal" data-delay="80">Uma história feita de barro e paciência</h2>
+          <p class="reveal" data-delay="140">
+            A Aura nasceu em um quintal, com um torno emprestado e muita vontade de aprender.
+            Hoje continuamos produzindo em pequenas quantidades, respeitando o tempo de cada etapa.
+          </p>
+          <p class="reveal" data-delay="200">
+            Por isso nenhuma peça é igual à outra. As pequenas imperfeições são a assinatura de
+            quem fez à mão, e é o que torna cada uma especial.
+          </p>
+
+          <dl class="stats reveal" data-delay="260">
+            <div><dt data-count="8" data-suffix="+">0</dt><dd>anos de ateliê</dd></div>
+            <div><dt data-count="500" data-suffix="+">0</dt><dd>peças criadas</dd></div>
+            <div><dt data-count="1200" data-suffix=" °C">0</dt><dd>no forno</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAIXA DE ENCOMENDA ================= -->
+    <section class="band">
+      <div class="container band__inner">
+        <div>
+          <h2 class="reveal">Quer uma peça só sua?</h2>
+          <p class="reveal" data-delay="100">Fazemos jogos de mesa, vasos e presentes sob medida, com a cor e o tamanho que você imaginar.</p>
+        </div>
+        <a class="btn btn--light reveal" data-delay="200" href="#contato">Pedir um orçamento</a>
+      </div>
+    </section>
+
+    <!-- ================= DEPOIMENTOS ================= -->
+    <section class="section section--sand" id="depoimentos">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <p class="eyebrow reveal">Depoimentos</p>
+          <h2 class="reveal" data-delay="80">Quem já levou uma Aura para casa</h2>
+        </header>
+
+        <div class="carousel reveal" id="carousel" aria-roledescription="carrossel" aria-label="Depoimentos de clientes">
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="track">
+              <figure class="quote">
+                <blockquote>“As canecas são lindas e o acabamento é impecável. Já virou a minha xícara favorita do dia a dia.”</blockquote>
+                <figcaption><strong>Mariana S.</strong><span>Coleção Manhã</span></figcaption>
+              </figure>
+              <figure class="quote">
+                <blockquote>“Encomendei um jogo de pratos de presente e foi um sucesso. Embalagem cuidadosa e entrega no prazo.”</blockquote>
+                <figcaption><strong>Rafael T.</strong><span>Coleção Mesa</span></figcaption>
+              </figure>
+              <figure class="quote">
+                <blockquote>“O vaso deixou a sala muito mais aconchegante. Dá para sentir o carinho que existe em cada detalhe.”</blockquote>
+                <figcaption><strong>Camila R.</strong><span>Coleção Raízes</span></figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="carousel__controls">
+            <button class="round" id="prev" aria-label="Depoimento anterior">←</button>
+            <div class="dots" id="dots" role="tablist" aria-label="Escolher depoimento"></div>
+            <button class="round" id="next" aria-label="Próximo depoimento">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq">
+      <div class="container faq">
+        <header class="section__head">
+          <p class="eyebrow reveal">Dúvidas frequentes</p>
+          <h2 class="reveal" data-delay="80">Antes de encomendar</h2>
+          <p class="reveal" data-delay="160">Não encontrou o que procurava? Escreva pelo formulário de contato.</p>
+        </header>
+
+        <div class="faq__list reveal" data-delay="120">
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="a1" id="q1">Qual é o prazo de entrega?</button>
+            <div class="faq__a" id="a1" role="region" aria-labelledby="q1"><div><p>Peças prontas saem em até 3 dias úteis. Encomendas sob medida levam de 3 a 4 semanas, por causa da secagem e das duas queimas.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="a2" id="q2">As peças podem ir ao micro-ondas e à lava-louças?</button>
+            <div class="faq__a" id="a2" role="region" aria-labelledby="q2"><div><p>Sim, as peças de mesa e as xícaras podem ir ao micro-ondas. Para durarem mais, recomendamos lavar à mão com esponja macia.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="a3" id="q3">Posso escolher a cor do esmalte?</button>
+            <div class="faq__a" id="a3" role="region" aria-labelledby="q3"><div><p>Pode. Cada peça tem três opções de esmalte, e para encomendas especiais conseguimos testar outras cores. Pequenas variações de tom fazem parte do processo artesanal.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="a4" id="q4">Como as peças são embaladas?</button>
+            <div class="faq__a" id="a4" role="region" aria-labelledby="q4"><div><p>Cada peça vai protegida em papel kraft e caixa reforçada, com enchimento de papel reciclado.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="section section--sand" id="contato">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="eyebrow reveal">Contato</p>
+          <h2 class="reveal" data-delay="80">Vamos criar a sua peça?</h2>
+          <p class="reveal" data-delay="140">Conte o que você imagina e respondemos em até 2 dias úteis.</p>
+
+          <ul class="contact__list reveal" data-delay="200">
+            <li><strong>Ateliê</strong><span>Visitas com hora marcada, de terça a sábado</span></li>
+            <li><strong>WhatsApp</strong><span>(11) 99999-9999</span></li>
+            <li><strong>E-mail</strong><span>ola@aura.ceramica</span></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="form" novalidate data-delay="120">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required>
+            <small class="error" id="nome-erro"></small>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <small class="error" id="email-erro"></small>
+          </div>
+          <div class="field">
+            <label for="tipo">O que você procura?</label>
+            <select id="tipo" name="tipo">
+              <option>Peças da coleção</option>
+              <option>Encomenda sob medida</option>
+              <option>Presente</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <small class="error" id="mensagem-erro"></small>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit" id="submitBtn">Enviar mensagem</button>
+          <p class="form__ok" id="formOk" role="status" hidden>Obrigada! Recebemos a sua mensagem e vamos responder em breve. 🌿</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--light">Aura<span>.</span></a>
+      <p>© <span id="year">2026</span> Aura Cerâmica. Todas as peças são feitas à mão.</p>
+      <div class="footer__links">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#inicio">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL DA PEÇA ================= -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <button class="modal__close" id="modalClose" aria-label="Fechar">×</button>
+    <div class="modal__grid">
+      <div class="modal__art" id="modalArt"></div>
+      <div class="modal__info" id="modalInfo"></div>
+    </div>
+  </dialog>
+
+  <!-- ================= GAVETA DA ENCOMENDA ================= -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Lista de encomenda">
+    <header class="drawer__head">
+      <h2>Sua encomenda</h2>
+      <button class="modal__close modal__close--static" id="drawerClose" aria-label="Fechar lista">×</button>
+    </header>
+    <div class="drawer__body" id="drawerBody"></div>
+    <footer class="drawer__foot" id="drawerFoot"></footer>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
